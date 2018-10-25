@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <!--注册页-->
+    <div id="my-tabs" class="mb-5">
+        <!--卡片导航-->
+        <div class="my-card">
+            <ul class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                <li class="breadcrumb-item"><a href="index.html">我的欧米茄页面</a></li>
+                <li class="breadcrumb-item">注册</li>
+            </ul>
+        </div>
+        <video src="img/login/omegahertime-stpetersburg-cn_1.mp4" muted autoplay loop class="w-100"></video>
+        <div id="my-log">
+            <ul class="tabs text-center mb-3">
+                <li class="active_login"><a data-toggle="tab" href="#login">登陆</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a data-toggle="tab" href="#register">注册</a></li>
+            </ul>
+            <div class="tabs_a">
+                <div id="login" class="mx-auto active_lg">
+                        <table class="mx-auto">
+                            <tr>
+                                <td>
+                                    邮箱账号：
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="email" placeholder="请输入您的邮箱" class="w-100 uemail" name="uemail">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    密码：
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="password" placeholder="请输入您的密码" class="w-100 upwd" name="upwd">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="hint text-danger"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="button" class="btn btn_change btn-danger border-0 w-100 loginin" value="登录">
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+                <div id="register" class="mx-auto">
+                    <form action="/user/register" method="POST">
+                        <table class="mx-auto">
+                            <tr>
+                                <td>称谓*</td>
+                                <td></td>
+                                <td class="text-right">必填项*</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="radio" class="d-none" value="1" name="gender" id="man" checked>
+                                    <label for="man" class="btn btn-light btn-dark">先生</label>
+                                    <input type="radio" class="d-none" value="0" name="gender" id="woman">
+                                    <label for="woman" class="btn btn-light">女士</label>
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <span id="showuname"></span>
+                                    <input type="text" placeholder="姓名*" class="w-100" name="uname">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <span id="showuemail"></span>
+                                    <input type="email" placeholder="邮箱地址*" class="w-100" name="uemail" id="uemail">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <span id="showupwd"></span>
+                                    <input type="password" placeholder="密码*" class="w-100" name="upwd" id="upwd">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <span id="showrupwd"></span>
+                                    <input type="password" placeholder="确认密码*" class="w-100" name="rupwd">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <input type="checkbox">我已阅读<a href="#">隐私政策</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <input type="button" class="w-100 btn btn-danger refer" value="提交" disabled>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

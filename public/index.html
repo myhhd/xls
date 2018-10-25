@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>欧米茄腕表: 瑞士著名钟表制造商 | OMEGA®</title>
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/base.css">
+      <link rel="stylesheet" href="css/header.css">
+      <link rel="stylesheet" href="css/footer.css">
+      <script src="js/vue.js"></script>
+  </head>
+  <body>
+    <!--头部-->
+    <header id="header"></header>
+    <!--主体-->
+    <main id="main">
+      <!--第一个轮播图-->
+      <div id="slider">
+        <div>
+          <ul>
+            <li class="show" v-for="(item,i) in car" v-if="i==0">
+              <a :href="item.href">
+                <img :src="item.img_url" class="w-100">
+              </a>
+            </li>
+            <li v-else>
+              <a :href="item.href">
+                <img :src="item.img_url" class="w-100">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="show1 list_li" v-for="(item,i) in car" v-if="i==0"></li>
+            <li v-else class="list_li"></li>
+          </ul>
+        </div>
+      </div>
+      <!--探索至臻天文台表-->
+      <div class="container">
+          <h1 class="text-center text-danger m-5">至臻天文台表：卓越品质，非凡升级</h1>
+          <p class="text-center mb-5">每一枚优雅的至臻天文台表均通过了代表制表业更高标准的认证程序: 历时10天的8项严苛测试,保证腕表及机芯的卓越精准度与防磁性能。我们精益求精，与您一起追求卓越。</p>
+          <div class="w-100 text-center mb-5">
+              <a href="product.html" class="btn btn-danger pt-3 pb-3 pl-5 pr-5 btn_change">探索更多</a>
+          </div>
+      </div>
+      <!--6张欧米茄天文台表-->
+      <div class="container mb-5">
+          <ul class="list-unstyled d-flex justify-content-around flex-wrap">
+              <li v-for="item in products" :key="item.lid">
+                  <div><img :src="item.img_url" class="w-100"></div>
+                  <a :href="item.detail_href" class="btn btn-danger w-100 p-3 btn_change" v-text="item.name"></a>
+              </li>
+          </ul>
+      </div>
+      <div class="container mb-5 w-100">
+        <!--欧米茄超霸系列-->
+        <h1 class="text-center text-danger m-5">欧米茄超霸系列“CK 2998”限量版腕表</h1>
+        <p class="text-center mb-5">探索欧米茄著名的超霸系列全新表款，配备罕见的脉搏读数刻度，重现经典设计。</p>
+        <div class="w-100 text-center mb-5">
+            <a href="product.html" class="btn btn-danger pt-3 pb-3 pl-5 pr-5 btn_change">探索此款腕表</a>
+        </div>
+        <img src="img/index/superba.jpg" class="w-100">
+        <!--无尽之蓝-->
+        <h1 class="text-center text-danger m-5">无尽之蓝</h1>
+        <p class="text-center mb-5">从天蓝色的表盘到午夜幽蓝的表壳，欧米茄以细密精巧的方式生动诠释蓝色腕表。</p>
+        <div class="w-100 text-center mb-5">
+            <a href="product.html" class="btn btn-danger pt-3 pb-3 pl-5 pr-5 btn_change">欧米茄蓝色表款</a>
+        </div>
+      </div>
+      <!--第二个轮播图-->
+      <div class="container" id="slider1">
+        <div>
+          <ul>
+            <li class="show2" v-for="(item,i) in car1" v-if="i==0" :key="item.id">
+              <a :href="item.href">
+                <img :src="item.img_url" class="w-100">
+              </a>
+            </li>
+            <li v-else :key="item.id">
+              <a :href="item.href">
+                <img :src="item.img_url" class="w-100">
+              </a>
+            </li>
+        </div>
+        <div>
+          <ul>
+            <li class="show3 list_li_1" v-for="(item,i) in car1" v-if="i==0"></li>
+            <li v-else class="list_li_1"></li>
+          </ul>
+        </div>
+      </div>
+      <!--侧边电梯按钮-->
+      <ul class="position-fixed">
+        <li></li>
+        <li class="list_active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </main>
+    <!--底部-->
+    <footer id="footer"></footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

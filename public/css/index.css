@@ -1,0 +1,119 @@
+/*第一个轮播图样式*/
+#slider>div:first-child>ul>li{
+    display: none;
+}
+#slider>div:first-child>ul>li.show{
+    display: block;
+}
+#slider>div:last-child{
+    height:20px;
+    width:100px;
+    line-height: 20px;
+    position: relative;
+    top:-30px;
+    left:45%;
+}
+#slider>div:last-child>ul>li{
+    float: left;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:gray;
+    margin: 0 5px;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+#slider>div:last-child>ul>li:hover{
+    transform: scale(1.3)
+}
+li.show1{
+    background-color: transparent !important;
+    transform: scale(1.3);
+    border:1px solid red;
+}
+/*六张图*/
+#main>div:nth-child(3) ul li div{
+    overflow: hidden;
+}
+#main>div:nth-child(3) ul li img{
+    transition: all 1s linear;
+}
+#main>div:nth-child(3) ul li img:hover{
+    transform: scale(1.06)
+}
+/*第二个轮播图样式*/
+#slider1>div:first-child>ul>li{
+    display: none;
+}
+#slider1>div:first-child>ul>li.show2{
+    display: block;
+}
+#slider1>div:last-child>ul{
+    height:20px;
+    width:120px;
+    margin:0 auto;
+}
+#slider1>div:last-child>ul>li{
+    float: left;
+    width:10px;
+    height:10px;
+    margin:10px 10px;
+    background: gray;
+    border-radius: 50%;
+    transition:all .5s linear;
+    cursor: pointer;
+}
+#slider1>div:last-child>ul>li:hover{
+    transform: scale(1.3);
+}
+#slider1>div:last-child>ul>li.show3{
+    background:#fff !important;
+    border:1px solid red;
+    transform: scale(1.3);
+}
+/*电梯按钮样式*/
+#main>ul:last-child{
+    bottom:30%;
+    right:3%;
+}
+#main>ul:last-child>li{
+    width:10px;
+    height:10px;
+    background:  rgb(217, 98, 94);
+    border-radius: 50%;
+    margin:10px;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+#main>ul:last-child>li:hover{
+    background: rgb(138, 134, 134);
+    transform: scale(1.5)
+}
+.list_active{
+    background: rgb(138, 134, 134);
+    transform: scale(1.5)
+}
+@media screen and (min-width:991px){
+    #main>div:nth-child(3)>ul>li{
+        width:30%;
+    }
+    #main>div:nth-child(3) ul li a{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    #main>div:nth-child(3)>ul>li{
+        width:40%;
+    }
+    #main>div:nth-child(3) ul li a{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:768px){
+    #main>div:nth-child(3)>ul>li{
+        width:100%;
+    }
+    footer>div:nth-child(2)>div:first-child{
+        display: none;
+    }
+}

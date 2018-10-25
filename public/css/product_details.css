@@ -1,0 +1,102 @@
+div.h_style{
+  width:100%;
+  height:15rem;
+  position: relative;
+  z-index: 5;
+  color: #ffffff;
+}
+div.h_style>ul{
+  background: transparent;
+}
+div.h_style>h2{
+  line-height: 15rem;
+}
+img.h_pic{
+  width:100%;
+  height:15rem;
+  position: absolute;
+  top:3rem;
+  left:0;
+  z-index: 0;
+}
+/*产品展示轮播图*/
+#product_sell>div:first-child{
+  position: relative;
+}
+#product_sell>div:first-child>ul>li.view{
+  display: none;
+}
+#product_sell>div:first-child>ul>li.active1{
+  display: block;
+}
+#product_sell>div:nth-child(2) .details{
+  display: none;
+}
+#product_sell>div:nth-child(2) .active3{
+  display: block;
+}
+#product_sell>div:first-child img.hover-prev{
+  position: absolute;
+  top:45%;
+  left:20px;
+}
+#product_sell>div:first-child img.hover-next{
+  position: absolute;
+  top:45%;
+  right:20px;
+}
+/*小按钮换图样式*/
+#product_sell>div:first-child>div:last-child{
+  height:20px;
+}
+#product_sell>div:first-child>div:last-child>ul{
+  width:120px;
+  height:20px;
+  margin:0 auto;
+}
+#product_sell>div:first-child>div:last-child>ul>li{
+  float: left;
+  height:10px;
+  width: 10px;
+  border-radius: 50%;
+  margin: 4px;
+  background:rgb(122, 132, 233);
+  transition: all .5s linear;
+  cursor: pointer;
+}
+#product_sell>div:first-child>div:last-child>ul>li.active2{
+  transform: scale(1.3);
+  background: rgb(163, 163, 236);
+}
+#product_sell>div:first-child>div:last-child>ul>li:hover{
+  transform: scale(1.3);
+  background: rgb(163, 163, 236);
+}
+/*产品展示手风琴动画*/
+.accordion{width:100%; margin:0 auto;}
+.accordion>.title{
+  background:#eee; 
+  border:1px solid #fff;
+  padding:6px; 
+  color:red;
+  text-align: center;
+  font-size: 1.3rem;
+  cursor:pointer;
+}
+.accordion>.content{
+  border-left:1px solid #eee;
+  border-right:1px solid #eee;
+}
+.accordion>:last-child{
+  border-bottom:1px solid #eee;
+}
+.accordion>.fade{
+  height:0;
+  opacity:0;
+  overflow:hidden;
+  transition:all .5s linear;
+}
+.accordion>.in{
+  height:200px;
+  opacity:1;
+}

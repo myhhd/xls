@@ -1,0 +1,9 @@
+div.text-center>input{
+    height:2rem;
+}
+div.container>div:nth-child(2)>a>img:hover{
+    transform:translate(0,-5px);
+}
+footer{
+    margin-top:100px;
+}

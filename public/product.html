@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <header id="header"></header>
+  <div id="main">
+    <!--产品展标题-->
+    <div class="h_style mb-5">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+        <li class="breadcrumb-item">2018年巴塞尔钟表珠宝展</li>
+      </ul>
+      <h2 class="text-center">2018年巴塞尔钟表珠宝展</h2>
+    </div>
+    <img src="img/product/product_header.jpg" class="h_pic">
+    <!--新款发布-->
+    <div class="container mb-5">
+      <h3 class="text-center text-danger mb-3">欧米茄全新腕表相继发布</h3>
+      <p class="text-center mb-5">今年，为致敬经典海马系列300米潜水表问世25周年，欧米茄特别推出全新300米潜水表表款。同时，还将推出周年纪念臻品和全新表款，其中包括全新蝶飞名典系列腕表和灵感源自太空探索的超霸系列腕表。此外，欧米茄继续在至臻天文台之路上稳步发展，不断推出机芯变革，将发布欧米茄第12款和第13款全新至臻天文台机芯</p>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <img :src="result[0].img_url" class="w-100">
+        </div>
+        <div class="col-md-6 col-sm-12 pt-5">
+            <h3 class="text-center text-danger mb-3" v-text="result[0].title"></h3>
+            <p class="text-center mb-5" v-text="result[0].subtitle"></p>
+            <div class="w-100"><a :href="result[0].detail_href" class="btn btn-danger pt-3 pb-3 pl-5 pr-5 btn_change mx-auto d-block w-50">探索此款腕表</a></div>
+        </div> 
+      </div>
+    </div>
+    <!--欧米茄海马系列-->
+    <div class="w-100 hm mb-5">
+      <img :src="result[1].img_url" class="w-100 hm_pic">
+      <div class="mt-5 hm_div">
+          <h3 class="text-center text-danger mb-3" v-text="result[1].title"></h3>
+          <p class="text-center mb-5" v-text="result[1].subtitle"></p>
+          <div class="w-100"><a :href="result[1].detail_href" class="btn btn-danger pt-3 pb-3 btn_change mx-auto d-block w-50">探索此款腕表</a></div>
+      </div> 
+    </div>
+    <!--欧米茄海马系列-->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <img :src="result[2].img_url" class="w-100">
+        </div>
+        <div class="col-md-6 col-sm-12 pt-5">
+            <h3 class="text-center text-danger mb-3" v-text="result[2].title"></h3>
+            <p class="text-center mb-5" v-text="result[2].subtitle"></p>
+            <div class="w-100"><a :href="result[2].detail_href" class="btn btn-danger pt-3 pb-3 pl-5 pr-5 btn_change mx-auto d-block w-50">探索此款腕表</a></div>
+        </div> 
+      </div>
+    </div>
+    <!--蝶飞名典系列腕表-->
+    <div class="w-100 hm mb-5">
+      <img :src="result[3].img_url" class="w-100 hm_pic">
+      <div class="mt-5 hm_div">
+          <h3 class="text-center text-danger mb-3" v-text="result[3].title"></h3>
+          <p class="text-center mb-5" v-text="result[3].subtitle"></p>
+          <div class="w-100"><a :href="result[3].detail_href" class="btn btn-danger pt-3 pb-3 btn_change mx-auto d-block w-50">探索此款腕表</a></div>
+      </div> 
+    </div>
+    <!--欧米茄海马系列AQUA TERRA珠宝腕表-->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <img :src="result[4].img_url" class="w-100">
+        </div>
+        <div class="col-md-6 col-sm-12 pt-5">
+            <h3 class="text-center text-danger mb-3" v-text="result[4].title"></h3>
+            <p class="text-center mb-5" v-text="result[4].subtitle"></p>
+            <div class="w-100"><a :href="result[4].detail_href" class="btn btn-danger pt-3 pb-3 pl-5 pr-5 btn_change mx-auto d-block w-50">探索此款腕表</a></div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/ajax.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

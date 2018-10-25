@@ -1,0 +1,78 @@
+/*导航卡样式*/
+body>div:nth-child(2)>ul{
+  background: transparent;
+}
+body>div:nth-child(2)>ul>li{
+  font-size: 0.8rem;
+}
+#my-tabs{
+  
+  position: relative;
+}
+#my-tabs>video{
+  position: relative;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+/*登陆及注册选项卡样式*/
+#my-log{
+  width:400px;
+  overflow: hidden;
+  background: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top:20%;
+  right:10%;
+}
+#my-log table{
+  width: 75%;
+  border-collapse:separate; 
+  border-spacing:0px 10px;
+}
+div.my-card{
+  position: absolute;
+  top:0;
+  left:0;
+}
+div.my-card>ul{
+  background: transparent;
+}
+div.my-card>ul>li>a{
+  color:red;
+}
+.tabs li{
+  display: inline-block;
+}
+.tabs a{
+  font-size: 1.5rem;
+  color:rgb(187, 179, 179);
+}
+.tabs li.active_login a{
+  color:red;
+}
+.tabs_a>div{
+  display: none;
+}
+div.active_lg{
+  display: block;
+}
+/*登陆及注册样式内容*/
+#register{
+  width:100%;
+  margin-bottom:20px;
+}
+#register tr{
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+#register td{
+  width:30%;
+}
+select{
+  height:1.5rem;
+}
+#login{
+  width:100%;
+  margin-bottom:50px;
+}

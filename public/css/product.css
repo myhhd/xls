@@ -1,0 +1,40 @@
+div.h_style{
+  width:100%;
+  height:15rem;
+  position: relative;
+  z-index: 5;
+  color: #ffffff;
+}
+div.h_style>ul{
+  background: transparent;
+}
+div.h_style>h2{
+  line-height: 15rem;
+}
+img.h_pic{
+  width:100%;
+  height:15rem;
+  position: absolute;
+  top:3rem;
+  left:0;
+  z-index: 0;
+}
+div.container h3{
+  font-size: 1.8rem;
+}
+div.hm{
+  position: relative;
+}
+img.hm_pic{
+  position: relative;
+}
+div.hm_div{
+  position: absolute;
+  top:30%;
+  left:10%;
+  width:40%;
+  height:20%;
+}
+div.hm_div>h3{
+  font-size: 1.8rem;
+}

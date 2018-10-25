@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product_details.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <header id="header"></header>
+  <main>
+  <!--产品展标题-->
+    <div class="h_style mb-5">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="http://127.0.0.1:3000/index.html">首页</a></li>
+        <li class="breadcrumb-item"><a href="http://127.0.0.1:3000/product.html">腕表</a></li>
+        <li class="breadcrumb-item">2018年巴塞尔钟表珠宝展</li>
+      </ul>
+      <h2 class="text-center">2018年巴塞尔钟表珠宝展</h2>
+    </div>
+    <img src="http://127.0.0.1:3000/img/product_details/product_header.jpg" class="h_pic">
+    <div id="hm">
+      <!--欧米茄海马系列300米潜水表-->
+      <div>
+        <h3 class="text-center text-danger" v-text="list.title"></h3>
+        <p class="text-center w-50 mx-auto mt-3" v-text="list.title_detail"></p>
+        <div class="text-center "><img :src="list.title_img" class="w-75"></div>
+        <h3 class="text-center text-danger" v-text="list.design"></h3>
+        <p class="text-center w-50 mx-auto mt-3" v-text="list.design_detail"></p>
+        <div class="text-center "><img :src="list.design_img" class="w-100"></div>
+        <h3 class="text-center text-danger mt-5" v-text="list.appearance_title"></h3>
+        <div class="text-center mt-5"><video :src="list.appearance_href" controls autoplay loop class="w-50"></video></div>
+        <h3 class="text-center text-danger mt-5" v-text="list.appearance"></h3>
+        <p class="text-center w-50 mx-auto mt-3" v-text="list.appearance_detail"></p>
+        <div class="text-center mt-5"><img :src="list.appearance_img" class="w-100"></div>
+      </div>
+      <div class="container">
+        <h3 class="text-center text-danger mt-5" v-text="list.surface"></h3>
+        <div class="row mt-5">
+          <div class="col-md-6 col-sm-12">
+            <img :src="list.surface_img" class="w-100">
+          </div>
+          <div class="col-md-6 col-sm-12 pt-5">
+              <h3 class="text-center text-danger mb-3" v-text="list.surface_title"></h3>
+              <p class="text-center mb-5" v-text="list.surface_detail"></p>
+          </div> 
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6 col-sm-12 pt-5">
+              <h3 class="text-center text-danger mb-3" v-text="list.pback_title"></h3>
+              <p class="text-center mb-5" v-text="list.pback_detail"></p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <img :src="list.pback_img" class="w-100">
+          </div>
+        </div>
+        <!--钛钽限量版腕表-->
+        <div class=" w-100 mt-5">
+          <h1 class="text-center text-danger" v-text="list.today_recommend"></h1>
+          <p class="text-center w-75 mx-auto mt-5" v-text="list.today_detail"></p>
+          <div class="text-center"><img :src="list.today_img" class="w-100 mt-5"></div>
+        </div>
+        <div class=" w-100 mt-5">
+          <h1 class="text-center text-danger" v-text="list.all_style"></h1>
+          <p class="text-center w-75 mx-auto mt-5" v-text="list.all_style_detail"></p>
+        </div>
+      </div>
+    </div>
+      <!--至臻天文台潜水表-->
+      <div class="row my-5 container mx-auto" id="product_sell">
+        <div class="col-md-6 col-sm-12 text-center">
+          <!--图片按钮轮播转换-->
+          <img src="img/product_details/hover-prev.png" class="btn float-left btn-light hover-prev">
+          <ul class="list-unstyle">
+            <li class="view active1" v-for="(item,i) in details" v-if="i==0" :key="item.pid">
+              <img :src="item.img_url" class="w-75">
+            </li>
+            <li class="view" v-else>
+              <img :src="item.img_url" class="w-75">
+            </li>
+          </ul>
+          <img src="img/product_details/hover-next.png" class="btn float-right btn-light hover-next">
+          <!--小按钮轮播-->
+          <div class="w-100 text-center">
+            <ul class="list-unstyle" id="smallBtn">
+              <li class="active2 list_li" v-for="(item,i) in details" v-if="i==0" :key="item.pid"></li>
+              <li class="list_li" v-else></li>
+            </ul>
+          </div>
+        </div>
+        <!--手表详情-->
+        <div class="col-md-6 col-sm-12" id="my_accordion">
+          <div class="details active3" v-for="(item,i) in details" v-if="i==0" :key="item.pid">
+            <p class="mt-5" v-text="item.series"></p>
+            <h4 class="my-4" v-text="item.genre"></h4>
+            <p v-text="item.ACC"></p>
+            <p v-text="item.serial"></p>
+            <div class="accordion">
+              <div class="title">上市时间</div>
+              <div class="content fade in">
+                <span>巴塞尔钟表珠宝展新品预展，所有新品将于2018年8月旗舰店开售。如需了解详情请联系您<a href="#" class="text-danger">附近的欧米茄旗舰店</a></span>
+              </div>
+              <div class="title">特色</div>
+              <div class="content fade">
+                <a href="#" class="text-danger">获瑞士官方天文台认证</a><br>
+                <a href="#" class="text-danger">日期显示</a><br>
+                <a href="#" class="text-danger">防磁</a><br>
+                <a href="#" class="text-danger">排氦气阀门</a><br>
+                <a href="#" class="text-danger">旋入式表冠</a><br>
+                <a href="#" class="text-danger">Geragold</a><br>
+                <a href="#" class="text-danger">透明表背</a><br>
+                <a href="#" class="text-danger">单向旋转表圈</a>
+              </div>
+              <div class="title">技术数据</div>
+              <div class="content fade">
+                <p>表耳间距：<span v-text="item.distance"></span></p>
+                <p>表链：<span v-text="item.chain"></span></p>
+                <p>表壳：<span v-text="item.watchcase"></span></p>
+                <p>表壳直径：<span v-text="item.diameter"></span></p>
+                <p>表盘颜色：<span v-text="item.color"></span></p>
+                <p>玻璃：<span v-text="item.glass_type"></span></p>
+                <p>防水性能：<span v-text="item.waterproof"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="details" v-else>
+            <p class="mt-5" v-text="item.series"></p>
+            <h4 class="my-4" v-text="item.genre"></h4>
+            <p v-text="item.ACC"></p>
+            <p v-text="item.serial"></p>
+            <div class="accordion">
+              <div class="title">上市时间</div>
+              <div class="content fade in">
+                <span>巴塞尔钟表珠宝展新品预展，所有新品将于2018年8月旗舰店开售。如需了解详情请联系您<a href="#" class="text-danger">附近的欧米茄旗舰店</a></span>
+              </div>
+              <div class="title">特色</div>
+              <div class="content fade">
+                <a href="#" class="text-danger">获瑞士官方天文台认证</a><br>
+                <a href="#" class="text-danger">日期显示</a><br>
+                <a href="#" class="text-danger">防磁</a><br>
+                <a href="#" class="text-danger">排氦气阀门</a><br>
+                <a href="#" class="text-danger">旋入式表冠</a><br>
+                <a href="#" class="text-danger">透明表背</a><br>
+                <a href="#" class="text-danger">单向旋转表圈</a> 
+              </div>
+              <div class="title">技术数据</div>
+              <div class="content fade">
+                <p>表耳间距：<span v-text="item.distance"></span></p>
+                <p>表链：<span v-text="item.chain"></span></p>
+                <p>表壳：<span v-text="item.watchcase"></span></p>
+                <p>表壳直径：<span v-text="item.diameter"></span></p>
+                <p>表盘颜色：<span v-text="item.color"></span></p>
+                <p>玻璃：<span v-text="item.glass_type"></span></p>
+                <p>防水性能：<span v-text="item.waterproof"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--跳转回巴塞尔钟表珠宝展首页-->
+    <div class="w-100 mb-5">
+      <h1 class="text-center text-danger mb-3">2018年巴塞尔钟表珠宝展新品</h1>
+      <p class="text-center mb-5">在全球备受瞩目⁠的巴塞尔钟表珠宝展上⁠，欧米茄将展示更多激动人心⁠的全新时计⁠。在这里⁠，您可以近距离欣赏欧米茄2018年巴塞尔钟表珠宝展新品⁠。</p>
+      <div class="w-50 mx-auto"><a href="http://127.0.0.1:3000/product.html" class="btn btn-danger pt-3 pb-3 btn_change mx-auto d-block w-50">探索更多</a></div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/ajax.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/product_details.js"></script>
+</body>
+</html>
